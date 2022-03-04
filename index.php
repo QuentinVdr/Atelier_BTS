@@ -49,7 +49,7 @@ require_once "header.php";
         <input type="hidden" name="token" id="token" value="<?php echo $token ?>">
         <div class="form-group col-md-6">
             <label for="email">Login :</label>
-            <input type="text" class="form_control" id="email" name="email" placeholder="exemple@mail.com" required>
+            <input type="text" class="form_control" id="login" name="login" placeholder="exemple@mail.com" required>
         </div>
         <br>
         <div class="form-group col-md-6">
