@@ -10,7 +10,7 @@ require_once "config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
 $requete = $pdo->prepare("select * from etude");
 $requete->execute();
-$etude = $requete-> fetchAll();
+$etudes = $requete-> fetchAll();
 
 //var_dump($lignes);
 
@@ -26,12 +26,12 @@ require_once "header.php";
 
     <h2>Etude realiser :</h2>
     <?php
-    if($etude = false){
+    if($etudes == false){
         echo "<p>Il n'y a pas eu d'etudes recement</p>";
     }
     else{
         echo "<div class='row row-cols-1 row-cols-md-3'>";
-        foreach (etudes as $e) { ?>
+        foreach ($etudes as $e) { ?>
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $e["nom"]; ?></h5>
