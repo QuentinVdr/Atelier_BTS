@@ -15,8 +15,8 @@ $err = filter_input(INPUT_POST, "err");
 
 require_once "../config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
-$requete = $pdo->prepare("select id from admin where email = :email AND MDP = :password");
-$requete->bindParam(":email", $login);
+$requete = $pdo->prepare("select id from admin where login = :login AND password = :password");
+$requete->bindParam(":login", $login);
 $requete->bindParam(":password", $password);
 $requete->execute();
 $result = $requete-> fetch();
