@@ -21,15 +21,15 @@ require_once "navbar.php";
 
             <form method="post" action="Actions/login_actions.php">
                 <input type="hidden" name="token" id="token" value="<?php echo $token ?>">
-                <div class="form-group col-md-6">
+                <div class="">
                     <label for="email">Login :</label>
                     <input type="text" class="form_control" id="login" name="login" placeholder="exemple@mail.com" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="">
                     <label for="password">Mot de passe :</label>
                     <input type="password" class="form_control" id="password" name="password" placeholder="password" required>
                 </div>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" class="btn">
             </form>
 
         </div>
@@ -40,15 +40,15 @@ require_once "navbar.php";
 
             <form method="post" action="Actions/admin_login_actions.php">
                 <input type="hidden" name="token" id="token" value="<?php echo $token ?>">
-                <div class="form-group col-md-6">
+                <div class="">
                     <label for="email">Login :</label>
                     <input type="text" class="form_control" id="login" name="login" placeholder="exemple@mail.com" required>
                 </div>
-                <div class="form-group col-md-6">
+                <div class="">
                     <label for="password">Mot de passe :</label>
                     <input type="password" class="form_control" id="password" name="password" placeholder="password" required>
                 </div>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" class="btn">
             </form>
 
         </div>

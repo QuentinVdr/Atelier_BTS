@@ -17,7 +17,7 @@ $requete = $pdo->prepare("select * from etude");
 $requete->execute();
 $etudes = $requete-> fetchAll();
 
-$title="Accueil - Ifrocean";
+$title="etudes - Ifrocean";
 require_once "header.php";
 require_once "navbar.php";
 ?>
@@ -38,7 +38,7 @@ require_once "navbar.php";
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $e["nom"]; ?></h5>
-                        <a href=".php?id=<?php echo $e["id"]; ?>" class="btn btn-primary">Enregistrer relevé</a>
+                        <a href=".php?id=<?php echo $e["id"]; ?>" class="btn">Enregistrer relevé</a>
                     </div>
                 </div>
             <?php }
