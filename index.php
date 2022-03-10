@@ -14,8 +14,9 @@ $etudes = $requete-> fetchAll();
 
 //var_dump($lignes);
 
-$title="Acueil - Ifrocean";
+$title="Accueil - Ifrocean";
 require_once "header.php";
+require_once "navbar.php";
 ?>
 
 <div class="container">
