@@ -28,5 +28,5 @@ if ($result != False){
     header("location: ../.php");
 } else {
     $_SESSION["login"]=False;
-    header("location: ../index.php");
+    header("location: ../login_admin.php");
 }
