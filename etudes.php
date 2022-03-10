@@ -6,13 +6,16 @@ $token=uniqid();
 //je le stocke en session
 $_SESSION["token"]=$token;
 
+if( $_SESSION["login_groupe"]!=True){
+    header("location: index.php");
+}
+//var_dump($_SESSION["login_groupe"]);
+
 require_once "config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
 $requete = $pdo->prepare("select * from etude");
 $requete->execute();
 $etudes = $requete-> fetchAll();
-
-//var_dump($lignes);
 
 $title="Accueil - Ifrocean";
 require_once "header.php";

@@ -25,7 +25,7 @@ $result = $requete-> fetch();
 
 if ($result != False){
     $_SESSION["login_groupe"]=True;
-    header("location: ../.php");
+    header("location: ../etudes.php");
 } else {
     $_SESSION["login_groupe"]=False;
     header("location: ../index.php");
