@@ -12,7 +12,7 @@ if($_SESSION["login_admin"]!=True){
 
 require_once "config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
-$requete = $pdo->prepare("SELECT * FROM departementd");
+$requete = $pdo->prepare("SELECT * FROM departement ORDER BY numero");
 $requete->execute();
 $departement = $requete-> fetchAll();
 

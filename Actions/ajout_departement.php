@@ -12,7 +12,7 @@ if($token!=$_SESSION["token"]){
 $nom = filter_input(INPUT_POST, "nom");
 $numero = filter_input(INPUT_POST, "numero");
 
-var_dump($nom, $numero);
+//var_dump($nom, $numero);
 
 //insertion dans la BDD
 //Je vais chercher dans la config (si pas encore fait)
@@ -24,6 +24,6 @@ $requete = $pdo->prepare("insert into departement(nom, numero) values (:nom, :nu
 $requete->bindParam(":nom", $nom);
 $requete->bindParam(":numero", $numero);
 
-//$requete->execute();
+$requete->execute();
 
-//header("location: ../edit_departements.php");
+header("location: ../edit_departements.php");
