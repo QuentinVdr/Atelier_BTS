@@ -40,8 +40,8 @@ require_once "navbar.php";
             <tr>
                 <td><?php echo $d["numero"]; ?></td>
                 <td><?php echo $d["nom"]; ?></td>
-                <td><a href="" class="btn">modifier</a></td>
-                <td><a href="" class="btn">supprimer</a></td>
+                <td><a href="Actions/" class="btn">modifier</a></td>
+                <td><a href="Actions/supprimer_departement.php?id=<?php echo $d["id"] ?>" class="btn">supprimer</a></td>
             </tr>
             <?php } ?>
             </tbody>
