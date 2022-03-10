@@ -11,7 +11,7 @@
         <div class="navbar-btn">
             <ul>
                 <li>
-                    <a href="login_admin.php" target="_self">Connexion Admin</a>
+                    <a href="login.php" target="_self">Connexion</a>
                 </li>
             </ul>
         </div>
