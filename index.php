@@ -19,7 +19,7 @@ require_once "navbar.php";
 
             <h2>Connexion groupe d'etude</h2>
 
-            <form method="post" action="Actions/login_actions.php">
+            <form method="post" action="Actions/login_action.php">
                 <input type="hidden" name="token" id="token" value="<?php echo $token ?>">
                 <div class="">
                     <label for="email">Login :</label>
@@ -38,7 +38,7 @@ require_once "navbar.php";
 
             <h2>Connexion administrateur</h2>
 
-            <form method="post" action="Actions/admin_login_actions.php">
+            <form method="post" action="Actions/admin_login_action.php">
                 <input type="hidden" name="token" id="token" value="<?php echo $token ?>">
                 <div class="">
                     <label for="email">Login :</label>

@@ -32,6 +32,7 @@ require_once "navbar.php";
                 <td>Nom</td>
                 <td></td>
                 <td></td>
+                <td></td>
             </tr>
             </thead>
             <tbody>
@@ -40,14 +41,29 @@ require_once "navbar.php";
             <tr>
                 <td><?php echo $d["numero"]; ?></td>
                 <td><?php echo $d["nom"]; ?></td>
-                <td><a href="Actions/" class="btn">modifier</a></td>
-                <td><a href="Actions/supprimer_departement.php?id=<?php echo $d["id"] ?>" class="btn">supprimer</a></td>
+                <td>
+                    <form action="Actions/renombrer_departement_action.php>">
+                        <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo$d["id"] ?>">
+                        <input type="text" id="numero" name="numero" class="form-control" required>
+                        <input type="submit" class="btn" value="Renombrer">
+                    </form>
+                </td>
+                <td>
+                    <form action="Actions/renommer_departement_action.php>">
+                        <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo$d["id"] ?>">
+                        <input type="text" id="nom" name="nom" class="form-control" required>
+                        <input type="submit" class="btn" value="Renommer">
+                    </form>
+                </td>
+                <td><a href="Actions/supprimer_departement_action.php?id=<?php echo $d["id"]?>" class="btn">supprimer</a></td>
             </tr>
             <?php } ?>
             </tbody>
         </table>
 
-        <form action="Actions/ajout_departement.php" method="post">
+        <form action="Actions/ajout_departement_action.php" method="post">
             <input type="hidden" value="<?php echo $token ?>" name="token" id="token">
             <div class="form-group">
                 <label for="numero">Numéro du département :</label>
