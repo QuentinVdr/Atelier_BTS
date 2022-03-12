@@ -47,7 +47,7 @@ require_once "navbar.php";
                 <td><?php echo $p["4"]; ?></td>
                 <td><?php echo $p["7"]; ?></td>
                 <td></td>
-                <td></td>
+                <td><a href="Actions/supprimer_plage_action.php?id=<?php echo $p["0"]?>" class="btn">Supprimer</a></td>
             </tr>
         <?php } ?>
         </tbody>
