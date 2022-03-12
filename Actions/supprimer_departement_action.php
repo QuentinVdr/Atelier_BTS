@@ -2,8 +2,6 @@
 //récupration des valeurs
 $id = filter_input(INPUT_GET, "id");
 
-//var_dump($id);
-
 //insertion dans la BDD
 //Je vais chercher dans la config (si pas encore fait)
 require_once "../config.php";
@@ -14,5 +12,7 @@ $requete = $pdo->prepare("DELETE FROM departement WHERE id=:id");
 $requete->bindParam(":id", $id);
 
 $requete->execute();
+
+//var_dump($id);
 
 header("location: ../edit_departements.php");

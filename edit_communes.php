@@ -46,9 +46,9 @@ require_once "navbar.php";
                 <td><?php echo $c["4"]; ?></td>
                 <td><?php echo $c["1"]; ?></td>
                 <td>
-                    <form action="Actions/renommer_commune_action.php">
+                    <form action="Actions/renommer_commune_action.php" method="post">
                         <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
-                        <input type="hidden" id="id" name="id" value="<?php echo$c["id"] ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo$c["0"] ?>">
                         <input type="text" id="nom" name="nom" class="form-control" required>
                         <input type="submit" class="btn" value="Renommer">
                     </form>

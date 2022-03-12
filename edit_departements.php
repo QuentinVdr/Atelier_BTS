@@ -16,7 +16,7 @@ $requete = $pdo->prepare("SELECT * FROM departement ORDER BY numero");
 $requete->execute();
 $departement = $requete-> fetchAll();
 
-var_dump($_SESSION["login_admin"], $departement);
+//var_dump($_SESSION["login_admin"], $departement);
 
 $title="edit departement - admin";
 require_once "header.php";
