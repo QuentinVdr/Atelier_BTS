@@ -22,8 +22,8 @@ $requete = $pdo->prepare("INSERT INTO plage(nom, commune_id) VALUES (:nom, :id_c
 $requete->bindParam(":nom", $nom);
 $requete->bindParam(":id_c", $id_c);
 
-//$requete->execute();
+$requete->execute();
 
-var_dump($nom, $id_c, $requete);
+//var_dump($nom, $id_c, $requete);
 
-//header("location: ../edit_plages.php");
+header("location: ../edit_plages.php");
