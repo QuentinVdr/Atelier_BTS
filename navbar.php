@@ -12,6 +12,12 @@
             <ul>
             <?php if($_SESSION["login_admin"]=True){?>
                 <li>
+                    <a href="edit_departements.php" class="btn" target="_self">Edit Departement</a>
+                </li>
+                <li>
+                    <a href="edit_communes.php" class="btn" target="_self">Edit Commune</a>
+                </li>
+                <li>
                     <a href=".php" class="btn" target="_self">Edit Plage</a>
                 </li>
                 <li>
@@ -21,9 +27,6 @@
                     <a href="visualiser_etudes.php" class="btn" target="_self">Edit Etude</a>
                 </li>
             <?php } ?>
-                <li>
-                    <a href="login.php" class="btn" target="_self">Connexion</a>
-                </li>
             </ul>
         </div>
 

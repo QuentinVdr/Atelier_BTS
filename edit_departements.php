@@ -57,7 +57,7 @@ require_once "navbar.php";
                         <input type="submit" class="btn" value="Renommer">
                     </form>
                 </td>
-                <td><a href="Actions/supprimer_departement_action.php?id=<?php echo $d["id"]?>" class="btn">supprimer</a></td>
+                <td><a href="Actions/supprimer_departement_action.php?id=<?php echo $d["id"]?>" class="btn">Supprimer</a></td>
             </tr>
             <?php } ?>
             </tbody>
