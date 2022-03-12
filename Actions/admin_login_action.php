@@ -25,7 +25,7 @@ $result = $requete-> fetch();
 
 if ($result != False){
     $_SESSION["login_admin"]=True;
-    header("location: ../visualiser_etudes.php");
+    header("location: ../edit_etudes.php");
 } else {
     $_SESSION["login_admin"]=False;
     header("location: ../index.php");

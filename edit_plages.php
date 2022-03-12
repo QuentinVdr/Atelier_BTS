@@ -23,33 +23,33 @@ require_once "header.php";
 require_once "navbar.php";
 ?>
 
-    <div class="container">
+<div class="container">
 
-        <table class="table">
-            <thead>
+    <table class="table">
+        <thead>
+        <tr>
+            <td>Plage</td>
+            <td>Commune</td>
+            <td>Département</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        foreach($plages as $p){?>
             <tr>
-                <td>Plage</td>
-                <td>Commune</td>
-                <td>departement</td>
+                <td><?php echo $p["nom"]; ?></td>
+                <td><?php echo $p["nom"]; ?></td>
+                <td><?php echo $p["nom"]; ?></td>
                 <td></td>
                 <td></td>
             </tr>
-            </thead>
-            <tbody>
-            <?php
-            foreach($plages as $p){?>
-            <tr>
-                <td><?php echo $p["nom"]; ?></td>
-                <td><?php echo $p["nom"]; ?></td>
-                <td><?php echo $p["nom"]; ?></td>
-                <td><a href="" class="btn">modifier</a></td>
-                <td><a href="" class="btn">supprimer</a></td>
-            </tr>
-            <?php } ?>
-            </tbody>
-        </table>
+        <?php } ?>
+        </tbody>
+    </table>
 
-    </div>
+</div>
 
 <?php
 require_once "footer.php";
