@@ -12,7 +12,7 @@ if($_SESSION["login_admin"]!=True){
 
 require_once "config.php";
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
-$requete = $pdo->prepare("SELECT * FROM commune");
+$requete = $pdo->prepare("SELECT * FROM commune JOIN departement WHERE commune.departement_id = departement.id");
 $requete->execute();
 $commune = $requete-> fetchAll();
 
@@ -20,7 +20,7 @@ $requete = $pdo->prepare("SELECT * FROM departement");
 $requete->execute();
 $departement = $requete-> fetchAll();
 
-//var_dump($_SESSION["login_admin"], $commune);
+var_dump($_SESSION["login_admin"], $commune, $departement);
 
 $title="edit cummune - admin";
 require_once "header.php";
@@ -43,10 +43,10 @@ require_once "navbar.php";
             <?php
             foreach($commune as $c){?>
             <tr>
-                <td><?php ?></td>
-                <td><?php echo $c["nom"]; ?></td>
+                <td><?php echo $c["4"]; ?></td>
+                <td><?php echo $c["1"]; ?></td>
                 <td>
-                    <form action="Actions/renommer_commune_action.php>">
+                    <form action="Actions/renommer_commune_action.php">
                         <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
                         <input type="hidden" id="id" name="id" value="<?php echo$c["id"] ?>">
                         <input type="text" id="nom" name="nom" class="form-control" required>
