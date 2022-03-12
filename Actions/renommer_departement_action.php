@@ -9,10 +9,9 @@ if ($token != $_SESSION["token"]) {
 }
 
 //récupration des valeurs
-$id = filter_input(INPUT_GET, "id");
-$nom = filter_input(INPUT_GET, "nom");
+$id = filter_input(INPUT_POST, "id");
+$nom = filter_input(INPUT_POST, "nom");
 
-//var_dump($id);
 
 //insertion dans la BDD
 //Je vais chercher dans la config (si pas encore fait)
@@ -25,5 +24,7 @@ $requete->bindParam(":id", $id);
 $requete->bindParam(":nom", $nom);
 
 $requete->execute();
+
+//var_dump($id);
 
 header("location: ../edit_departements.php");

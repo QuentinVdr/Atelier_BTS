@@ -16,7 +16,7 @@ $requete = $pdo->prepare("SELECT * FROM departement ORDER BY numero");
 $requete->execute();
 $departement = $requete-> fetchAll();
 
-//var_dump($_SESSION["login_admin"], $departement);
+var_dump($_SESSION["login_admin"], $departement);
 
 $title="edit departement - admin";
 require_once "header.php";
@@ -42,15 +42,15 @@ require_once "navbar.php";
                 <td><?php echo $d["numero"]; ?></td>
                 <td><?php echo $d["nom"]; ?></td>
                 <td>
-                    <form action="Actions/renombrer_departement_action.php>">
+                    <form action="Actions/renombrer_departement_action.php" method="post">
                         <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
-                        <input type="hidden" id="id" name="id" value="<?php echo$d["id"] ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo $d['id'] ?>">
                         <input type="text" id="numero" name="numero" class="form-control" required>
                         <input type="submit" class="btn" value="Renombrer">
                     </form>
                 </td>
                 <td>
-                    <form action="Actions/renommer_departement_action.php>">
+                    <form action="Actions/renommer_departement_action.php" method="post">
                         <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
                         <input type="hidden" id="id" name="id" value="<?php echo$d["id"] ?>">
                         <input type="text" id="nom" name="nom" class="form-control" required>
