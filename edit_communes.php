@@ -16,7 +16,7 @@ $requete = $pdo->prepare("SELECT * FROM commune JOIN departement WHERE commune.d
 $requete->execute();
 $commune = $requete-> fetchAll();
 
-$requete = $pdo->prepare("SELECT * FROM departement");
+$requete = $pdo->prepare("SELECT * FROM departement ORDER BY numero");
 $requete->execute();
 $departement = $requete-> fetchAll();
 
@@ -66,7 +66,7 @@ require_once "navbar.php";
                 <select name="id_departement" id="id_departement" class="form-control">
                     <option selected disabled>Faites un choix</option>
                     <?php foreach($departement as $d){?>
-                        <option value="<?php echo $d['id']?>"><?php echo $d['nom']?></option>
+                        <option value="<?php echo $d['id']?>"><?php echo $d["numero"]," - ", $d['nom']?></option>
                     <?php } ?>
                 </select>
             </div>
