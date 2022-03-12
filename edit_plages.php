@@ -20,7 +20,7 @@ $requete = $pdo->prepare("SELECT * FROM commune ORDER BY nom");
 $requete->execute();
 $communes = $requete-> fetchAll();
 
-var_dump($_SESSION["login_admin"], $plages, $communes);
+//var_dump($_SESSION["login_admin"], $plages, $communes);
 
 $title="edit plages - admin";
 require_once "header.php";
@@ -46,7 +46,14 @@ require_once "navbar.php";
                 <td><?php echo $p["1"]; ?></td>
                 <td><?php echo $p["4"]; ?></td>
                 <td><?php echo $p["7"]; ?></td>
-                <td></td>
+                <td>
+                    <form action="Actions/renommer_plage_action.php" method="post">
+                        <input type="hidden" id="token" name="token" value="<?php echo $token ?>">
+                        <input type="hidden" id="id" name="id" value="<?php echo$p["0"] ?>">
+                        <input type="text" id="nom" name="nom" class="form-control" required>
+                        <input type="submit" class="btn" value="Renommer">
+                    </form>
+                </td>
                 <td><a href="Actions/supprimer_plage_action.php?id=<?php echo $p["0"]?>" class="btn">Supprimer</a></td>
             </tr>
         <?php } ?>
