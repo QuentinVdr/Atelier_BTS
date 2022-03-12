@@ -64,7 +64,7 @@ require_once "navbar.php";
         <input type="hidden" value="<?php echo $token ?>" name="token" id="token">
         <div class="form-group">
             <label for="commune_id">Selectionner la commune</label>
-            <select name="commune_id" id="communeid_" class="form-control">
+            <select name="commune_id" id="commune_id" class="form-control">
                 <option selected disabled>Faites un choix</option>
                 <?php foreach($communes as $c){?>
                     <option value="<?php echo $c['id']?>"><?php echo $c['nom']?></option>
