@@ -12,19 +12,19 @@
             <ul>
             <?php if($_SESSION["login_admin"]=True){?>
                 <li>
-                    <a href="edit_departements.php" class="btn" target="_self">Edit Departement</a>
+                    <a href="edit_departements.php" class="btn" target="_self">Edit Departements</a>
                 </li>
                 <li>
-                    <a href="edit_communes.php" class="btn" target="_self">Edit Commune</a>
+                    <a href="edit_communes.php" class="btn" target="_self">Edit Communes</a>
                 </li>
                 <li>
-                    <a href=".php" class="btn" target="_self">Edit Plage</a>
+                    <a href="edit_plages.php" class="btn" target="_self">Edit Plages</a>
                 </li>
                 <li>
-                    <a href=".php" class="btn" target="_self">Edit Espece</a>
+                    <a href=".php" class="btn" target="_self">Edit Especes</a>
                 </li>
                 <li>
-                    <a href="visualiser_etudes.php" class="btn" target="_self">Edit Etude</a>
+                    <a href="edit_etudes.php" class="btn" target="_self">Edit Etude</a>
                 </li>
             <?php } ?>
             </ul>
