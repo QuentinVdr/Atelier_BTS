@@ -10,7 +10,7 @@ if($token!=$_SESSION["token"]) {
 
 //récupration des valeurs
 $nom = filter_input(INPUT_POST, "nom");
-$id_c = filter_input(INPUT_POST, "id_commune");
+$commune_id = filter_input(INPUT_POST, "commune_id");
 
 //insertion dans la BDD
 //Je vais chercher dans la config (si pas encore fait)
@@ -18,9 +18,9 @@ require_once "../config.php";
 //Faire une connexion à la BDD
 $pdo = new PDO("mysql:host=" . Config::SERVER . ";dbname=" . Config::BDD, Config::USER, Config::PASSWORD);
 //Préparer la requête
-$requete = $pdo->prepare("INSERT INTO plage(nom, commune_id) VALUES (:nom, :id_c)");
+$requete = $pdo->prepare("INSERT INTO plage(nom, commune_id) VALUES (:nom, :commune_id)");
 $requete->bindParam(":nom", $nom);
-$requete->bindParam(":id_c", $id_c);
+$requete->bindParam(":commune_id", $commune_id);
 
 $requete->execute();
 

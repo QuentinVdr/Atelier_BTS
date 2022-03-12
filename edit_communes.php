@@ -62,8 +62,8 @@ require_once "navbar.php";
         <form action="Actions/ajout_commune_action.php" method="post">
             <input type="hidden" value="<?php echo $token ?>" name="token" id="token">
             <div class="form-group">
-                <label for="id_departement">Sellectionner le departement</label>
-                <select name="id_departement" id="id_departement" class="form-control">
+                <label for="departement_id">Selectionner le departement</label>
+                <select name="departement_id" id="departement_id" class="form-control">
                     <option selected disabled>Faites un choix</option>
                     <?php foreach($departement as $d){?>
                         <option value="<?php echo $d['id']?>"><?php echo $d["numero"]," - ", $d['nom']?></option>
