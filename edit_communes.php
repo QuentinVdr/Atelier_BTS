@@ -20,7 +20,7 @@ $requete = $pdo->prepare("SELECT * FROM departement");
 $requete->execute();
 $departement = $requete-> fetchAll();
 
-var_dump($_SESSION["login_admin"], $commune, $departement);
+//var_dump($_SESSION["login_admin"], $commune, $departement);
 
 $title="edit cummune - admin";
 require_once "header.php";
