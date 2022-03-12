@@ -63,7 +63,7 @@ require_once "navbar.php";
     <form action="Actions/ajout_plage_action.php" method="post">
         <input type="hidden" value="<?php echo $token ?>" name="token" id="token">
         <div class="form-group">
-            <label for="commune_id">Selectionner la commune</label>
+            <label for="commune_id">Selectionner la commune :</label>
             <select name="commune_id" id="commune_id" class="form-control">
                 <option selected disabled>Faites un choix</option>
                 <?php foreach($communes as $c){?>
